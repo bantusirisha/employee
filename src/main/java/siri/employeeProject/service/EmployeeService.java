@@ -16,11 +16,11 @@ public class EmployeeService {
     public List<Employee> getAllEmployees() {
         return employeeRepo.findAll();
     }
+
     public Employee saveEmployees(Employee employee){
         employeeRepo.save(employee);
         return employee;
     }
-
 
     public Employee updateEmployees(Employee employee){
         var optEmp=employeeRepo.findById(employee.getEmpId());
